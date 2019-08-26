@@ -41,7 +41,7 @@ module.exports = "<router-outlet></router-outlet>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"wall != null\">\n  <div>\n    <h1>{{wall['list_name']}}</h1>\n    <h5>{{wall['list_description']}}</h5>\n  </div>\n</div>\n\n<div *ngIf=\"items.length != 0\">\n  <ul class = \"list-group\">\n    <li *ngFor=\"let item of items\" class = \"list-group-item\" [id] = \"item['item_id']\">\n      {{item['type']}}:  {{item['item']}}\n      <button [ngStyle]=\"{'float':'right'}\" type = \"button\" class=\"btn btn-danger\" (click)=\"deleteItem(item['item_id'], $event)\">Delete</button>\n    </li>\n  </ul>\n</div>\n\n<form></form>\n"
+module.exports = "<div *ngIf=\"wall != null\">\n  <div>\n    <h1>{{wall['list_name']}}</h1>\n    <h5>{{wall['list_description']}}</h5>\n  </div>\n</div>\n\n<div *ngIf=\"items != null\">\n  <ul class = \"list-group\">\n    <li *ngFor=\"let item of items\" class = \"list-group-item\" [id] = \"item['item_id']\">\n      {{item['type']}}:  {{item['item']}}\n      <button [ngStyle]=\"{'float':'right'}\" type = \"button\" class=\"btn btn-danger\" (click)=\"deleteItem(item['item_id'], $event)\">Delete</button>\n    </li>\n  </ul>\n</div>\n\n<form></form>\n"
 
 /***/ }),
 
@@ -239,10 +239,10 @@ var GroceryListComponent = /** @class */ (function () {
         });
     };
     GroceryListComponent.prototype.deleteItem = function (item_id, event) {
+        event.stopPropagation();
         this.groceryListService.delete(item_id);
         var elem = document.querySelector("#" + item_id);
         elem.parentNode.removeChild(elem);
-        event.stopImmediatePropagation();
     };
     GroceryListComponent.ctorParameters = function () { return [
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
@@ -309,10 +309,10 @@ var GroceryListsComponent = /** @class */ (function () {
         this.router.navigate([toUrl]);
     };
     GroceryListsComponent.prototype.delete = function (list_id, event) {
+        event.stopPropagation();
         this.groceryListService.delete(list_id);
         var elem = document.querySelector("#" + list_id);
         elem.parentNode.removeChild(elem);
-        event.stopImmediatePropagation();
     };
     GroceryListsComponent.ctorParameters = function () { return [
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },

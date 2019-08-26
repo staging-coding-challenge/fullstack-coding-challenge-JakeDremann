@@ -9,23 +9,11 @@
     <list default="true" id="1d8235ea-6786-4006-a7e3-e4a10672b038" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/src/app/grocery-list/grocery-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/src/app/grocery-list/grocery-list.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/src/app/grocery-list/grocery-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/src/app/grocery-list/grocery-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/src/app/grocery-lists/grocery-lists.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/src/app/grocery-lists/grocery-lists.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/src/app/grocery-lists/grocery-lists.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/src/app/grocery-lists/grocery-lists.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/src/app/services/grocery-lists.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/src/app/services/grocery-lists.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/src/app/services/grocerylist.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/src/app/services/grocerylist.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/controller/GroceryItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/controller/GroceryItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/model/GroceryItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/model/GroceryItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/repository/GroceryItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/repository/GroceryItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/service/GroceryItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/service/GroceryItemService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main-es2015.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main-es2015.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main-es5.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main-es5.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/grocerylist/main-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/grocerylist/main-es2015.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/grocerylist/main-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/grocerylist/main-es2015.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/grocerylist/main-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/grocerylist/main-es5.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/grocerylist/main-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/grocerylist/main-es5.js.map" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -417,12 +405,12 @@
       <option name="presentableId" value="Default" />
       <updated>1566825817302</updated>
       <workItem from="1566825821856" duration="418000" />
-      <workItem from="1566826331416" duration="22416000" />
+      <workItem from="1566826331416" duration="22935000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22834000" />
+    <option name="totallyTimeSpent" value="23353000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />

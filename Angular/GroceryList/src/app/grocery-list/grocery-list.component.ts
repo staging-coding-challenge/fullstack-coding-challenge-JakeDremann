@@ -12,7 +12,7 @@ export class GroceryListComponent implements OnInit {
 
   wallId: number;
   wall;
-  items: [] = [];
+  items: [];
 
   constructor(private route: ActivatedRoute,
               private groceryListService: GrocerylistService,
@@ -29,9 +29,9 @@ export class GroceryListComponent implements OnInit {
   }
 
   deleteItem(item_id: number, event){
+    event.stopPropagation();
     this.groceryListService.delete(item_id);
     let elem = document.querySelector("#"+item_id);
     elem.parentNode.removeChild(elem)
-    event.stopImmediatePropagation();
   }
 }

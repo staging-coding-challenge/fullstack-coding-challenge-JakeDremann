@@ -41,7 +41,7 @@ module.exports = "<router-outlet></router-outlet>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"wall != null\">\n  <div>\n    <h1>{{wall['list_name']}}</h1>\n    <h5>{{wall['list_description']}}</h5>\n  </div>\n</div>\n\n<div *ngIf=\"items.length != 0\">\n  <ul class = \"list-group\">\n    <li *ngFor=\"let item of items\" class = \"list-group-item\" [id] = \"item['item_id']\">\n      {{item['type']}}:  {{item['item']}}\n      <button [ngStyle]=\"{'float':'right'}\" type = \"button\" class=\"btn btn-danger\" (click)=\"deleteItem(item['item_id'], $event)\">Delete</button>\n    </li>\n  </ul>\n</div>\n\n<form></form>\n"
+module.exports = "<div *ngIf=\"wall != null\">\n  <div>\n    <h1>{{wall['list_name']}}</h1>\n    <h5>{{wall['list_description']}}</h5>\n  </div>\n</div>\n\n<div *ngIf=\"items != null\">\n  <ul class = \"list-group\">\n    <li *ngFor=\"let item of items\" class = \"list-group-item\" [id] = \"item['item_id']\">\n      {{item['type']}}:  {{item['item']}}\n      <button [ngStyle]=\"{'float':'right'}\" type = \"button\" class=\"btn btn-danger\" (click)=\"deleteItem(item['item_id'], $event)\">Delete</button>\n    </li>\n  </ul>\n</div>\n\n<form></form>\n"
 
 /***/ }),
 
@@ -231,10 +231,10 @@ let GroceryListComponent = class GroceryListComponent {
         });
     }
     deleteItem(item_id, event) {
+        event.stopPropagation();
         this.groceryListService.delete(item_id);
         let elem = document.querySelector("#" + item_id);
         elem.parentNode.removeChild(elem);
-        event.stopImmediatePropagation();
     }
 };
 GroceryListComponent.ctorParameters = () => [
@@ -299,10 +299,10 @@ let GroceryListsComponent = class GroceryListsComponent {
         this.router.navigate([toUrl]);
     }
     delete(list_id, event) {
+        event.stopPropagation();
         this.groceryListService.delete(list_id);
         let elem = document.querySelector("#" + list_id);
         elem.parentNode.removeChild(elem);
-        event.stopImmediatePropagation();
     }
 };
 GroceryListsComponent.ctorParameters = () => [
