@@ -1,0 +1,9 @@
+<h1>My Lists</h1>
+
+<div *ngFor="let list of lists">
+  <div class = "card" (click)="toDetail(list['list_id'])">
+    <div class = "card-title">{{list['list_name']}}</div>
+    <div class = "card-body">{{list['list_description']}}</div>
+<!--    <button type="button" class="btn btn-danger" (click)=delete(list['list_id'])>Delete</button>-->
+  </div>
+</div>

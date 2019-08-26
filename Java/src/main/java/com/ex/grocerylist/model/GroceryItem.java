@@ -8,13 +8,16 @@ import javax.transaction.Transactional;
 @Transactional
 public class GroceryItem {
 
+
+
     @Column(name = "item_id")
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int item_id;
 
-    @Column
-    private int list_id;
+    @ManyToOne
+    @JoinColumn(name="list_id")
+    private GroceryList list_id;
 
     @Column(name="item")
     private String item;
@@ -27,7 +30,7 @@ public class GroceryItem {
 
     }
 
-    public GroceryItem(int list_id, String item, String type){
+    public GroceryItem(GroceryList list_id, String item, String type){
 
         this.list_id = list_id;
         this.item = item;
@@ -38,11 +41,11 @@ public class GroceryItem {
         return item_id;
     }
 
-    public int getList_id() {
+    public GroceryList getList_id() {
         return list_id;
     }
 
-    public void setList_id(int list_id) {
+    public void setList_id(GroceryList list_id) {
         this.list_id = list_id;
     }
 

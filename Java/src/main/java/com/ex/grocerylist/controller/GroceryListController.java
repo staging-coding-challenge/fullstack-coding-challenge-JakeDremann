@@ -53,6 +53,31 @@ public class GroceryListController {
         }
     }
 
+    @GetMapping("/grocery-lists/{list_id}")
+    public @ResponseBody ResponseEntity<String> getList(
+            HttpServletRequest request,
+            HttpServletResponse response,
+            @PathVariable(value = "list_id") int list_id){
+
+        GroceryList groceryList = this.groceryListService.getList(list_id);
+        ObjectMapper mapper = new ObjectMapper();
+
+        try {
+            String json = mapper.writeValueAsString(groceryList);
+
+            return ResponseEntity.status(HttpStatus.OK)
+                    .header("Content-type", "application/json")
+                    .body(json);
+        }catch (IOException e){
+
+            e.printStackTrace();
+            return ResponseEntity.status(HttpStatus.OK)
+                    .header("Content-type","application/json")
+                    .body("");
+        }
+
+    }
+
     @PostMapping("/grocery-lists")
     public @ResponseBody ResponseEntity<String> createList(
             HttpServletRequest request,

@@ -2,14 +2,19 @@ package com.ex.grocerylist.model;
 
 import javax.persistence.*;
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Entity
 @Table(name="grocery_list")
 @Transactional
 public class GroceryList {
 
+    @OneToMany(mappedBy = "list_id")
+    private List<GroceryItem> items;
+
+
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="list_id")
     private int list_id;
 
