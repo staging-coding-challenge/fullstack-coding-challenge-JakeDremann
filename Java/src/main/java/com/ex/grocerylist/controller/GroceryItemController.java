@@ -30,7 +30,7 @@ public class GroceryItemController {
     public @ResponseBody ResponseEntity<String> addItem(
             HttpServletRequest request,
             HttpServletResponse response,
-            @PathVariable(value="list_id") GroceryList list_id,
+            @PathVariable(value="list_id") int list_id,
             @RequestParam String item,
             @RequestParam String type){
 
@@ -43,7 +43,7 @@ public class GroceryItemController {
                 .body("{\"id\":"+newId+"}");
     }
 
-    @DeleteMapping("/grocery-list/items/{item_id}")
+    @DeleteMapping("/grocery-lists/items/{item_id}")
     public @ResponseBody ResponseEntity<String> deleteItem(
             HttpServletRequest request,
             HttpServletResponse response,

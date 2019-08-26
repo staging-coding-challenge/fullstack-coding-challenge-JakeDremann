@@ -1,11 +1,16 @@
-<div>
-  <h1>{{wall['list_name']}}</h1>
-  <h5>{{wall['list_description']}}</h5>
+<div *ngIf="wall != null">
+  <div>
+    <h1>{{wall['list_name']}}</h1>
+    <h5>{{wall['list_description']}}</h5>
+  </div>
 </div>
 
-<div>
+<div *ngIf="items.length != 0">
   <ul class = "list-group">
-    <li *ngFor="let item of items" class = "list-group-item">{{item['type']}}:  {{item['item']}}</li>
+    <li *ngFor="let item of items" class = "list-group-item" [id] = "item['item_id']">
+      {{item['type']}}:  {{item['item']}}
+      <button [ngStyle]="{'float':'right'}" type = "button" class="btn btn-danger" (click)="deleteItem(item['item_id'], $event)">Delete</button>
+    </li>
   </ul>
 </div>
 

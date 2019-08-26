@@ -41,7 +41,7 @@ module.exports = "<router-outlet></router-outlet>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <h1>{{wall['list_name']}}</h1>\n  <h5>{{wall['list_description']}}</h5>\n</div>\n\n<div>\n  <ul class = \"list-group\">\n    <li *ngFor=\"let item of items\" class = \"list-group-item\">{{item['type']}}:  {{item['item']}}</li>\n  </ul>\n</div>\n\n<form></form>\n"
+module.exports = "<div *ngIf=\"wall != null\">\n  <div>\n    <h1>{{wall['list_name']}}</h1>\n    <h5>{{wall['list_description']}}</h5>\n  </div>\n</div>\n\n<div *ngIf=\"items.length != 0\">\n  <ul class = \"list-group\">\n    <li *ngFor=\"let item of items\" class = \"list-group-item\" [id] = \"item['item_id']\">\n      {{item['type']}}:  {{item['item']}}\n      <button [ngStyle]=\"{'float':'right'}\" type = \"button\" class=\"btn btn-danger\" (click)=\"deleteItem(item['item_id'], $event)\">Delete</button>\n    </li>\n  </ul>\n</div>\n\n<form></form>\n"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<div>\n  <h1>{{wall['list_name']}}</h1>\n  <h5>{{wall['list_de
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>My Lists</h1>\n\n<div *ngFor=\"let list of lists\">\n  <div class = \"card\" (click)=\"toDetail(list['list_id'])\">\n    <div class = \"card-title\">{{list['list_name']}}</div>\n    <div class = \"card-body\">{{list['list_description']}}</div>\n<!--    <button type=\"button\" class=\"btn btn-danger\" (click)=delete(list['list_id'])>Delete</button>-->\n  </div>\n</div>\n"
+module.exports = "<h1>My Lists</h1>\n\n<div *ngFor=\"let list of lists\" [id]=\"list['list_id']\">\n  <div class = \"card\" (click)=\"toDetail(list['list_id'])\">\n    <div class = \"card-title\">\n      {{list['list_name']}}\n      <button [ngStyle]=\"{'float':'right'}\"type=\"button\" class=\"btn btn-danger\" (click)=\"delete(list['list_id'], $event)\">Delete</button>\n    </div>\n    <div class = \"card-body\">{{list['list_description']}}</div>\n\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -223,13 +223,18 @@ let GroceryListComponent = class GroceryListComponent {
     }
     ngOnInit() {
         this.wallId = this.route.snapshot.params['id'];
-        console.log(this.wallId);
         this.groceryListService.getItemsForList(this.wallId, resp => {
             this.items = JSON.parse(resp);
         });
         this.groceryListsService.getOne(this.wallId, resp => {
             this.wall = JSON.parse(resp);
         });
+    }
+    deleteItem(item_id, event) {
+        this.groceryListService.delete(item_id);
+        let elem = document.querySelector("#" + item_id);
+        elem.parentNode.removeChild(elem);
+        event.stopImmediatePropagation();
     }
 };
 GroceryListComponent.ctorParameters = () => [
@@ -293,8 +298,11 @@ let GroceryListsComponent = class GroceryListsComponent {
         let toUrl = "/list/" + list_id;
         this.router.navigate([toUrl]);
     }
-    delete(list_id) {
+    delete(list_id, event) {
         this.groceryListService.delete(list_id);
+        let elem = document.querySelector("#" + list_id);
+        elem.parentNode.removeChild(elem);
+        event.stopImmediatePropagation();
     }
 };
 GroceryListsComponent.ctorParameters = () => [
@@ -364,7 +372,7 @@ let GroceryListsService = class GroceryListsService {
         return x;
     }
     delete(list_id) {
-        let urlString = "/api/grocery-list/" + list_id;
+        let urlString = "/api/grocery-lists/" + list_id;
         let x = this.http.delete(urlString, {
             headers: this.headers,
             responseType: "text"
@@ -414,7 +422,7 @@ let GrocerylistService = class GrocerylistService {
             callback(items);
         });
     }
-    deleteItem(item_id) {
+    delete(item_id) {
         let urlString = "/api/grocery-lists/items/" + item_id;
         let x = this.http.delete(urlString, {
             headers: this.headers,

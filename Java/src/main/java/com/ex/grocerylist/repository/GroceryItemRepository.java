@@ -1,6 +1,7 @@
 package com.ex.grocerylist.repository;
 
 import com.ex.grocerylist.model.GroceryItem;
+import com.ex.grocerylist.model.GroceryList;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

@@ -7,21 +7,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1d8235ea-6786-4006-a7e3-e4a10672b038" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/src/app/grocery-list/grocery-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/src/app/grocery-list/grocery-list.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/src/app/grocery-list/grocery-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/src/app/grocery-list/grocery-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/src/app/grocery-lists/grocery-lists.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/src/app/grocery-lists/grocery-lists.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/src/app/grocery-lists/grocery-lists.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/src/app/grocery-lists/grocery-lists.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/src/app/services/grocery-lists.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/src/app/services/grocery-lists.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Angular/GroceryList/src/app/services/grocerylist.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Angular/GroceryList/src/app/services/grocerylist.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/controller/GroceryItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/controller/GroceryItemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/controller/GroceryListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/controller/GroceryListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/model/GroceryItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/model/GroceryItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/model/GroceryList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/model/GroceryList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/repository/GroceryItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/repository/GroceryItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/repository/GroceryListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/repository/GroceryListRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/service/GroceryItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/service/GroceryItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/service/GroceryListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/service/GroceryListService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/main-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main-es5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/grocerylist/main-es2015.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/grocerylist/main-es2015.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/grocerylist/main-es2015.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/grocerylist/main-es2015.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/grocerylist/main-es5.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/grocerylist/main-es5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/grocerylist/main-es5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/target/grocerylist/main-es5.js.map" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,7 +44,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ex/grocerylist/controller/GroceryListController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
+            <state relative-caret-position="-14">
               <caret line="65" column="63" selection-start-line="65" selection-start-column="63" selection-end-line="65" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -52,10 +56,60 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ex/grocerylist/controller/GroceryItemController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+            <state relative-caret-position="477">
+              <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ex/grocerylist/repository/GroceryItemRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ex/grocerylist/model/GroceryItem.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ex/grocerylist/configuration/AppConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="63" column="59" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ex/grocerylist/service/GroceryItemService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#723#724#0" expanded="true" />
+                <element signature="e#791#792#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,13 +136,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/service/GroveryListService.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/controller/GroceryListController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/repository/GroceryItemRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/repository/GroceryListRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/service/GroceryItemService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/service/GroceryListService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/model/GroceryList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/model/GroceryItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/service/GroceryItemService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/repository/GroceryItemRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/configuration/AppConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/model/GroceryItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ex/grocerylist/controller/GroceryItemController.java" />
       </list>
     </option>
@@ -363,12 +417,12 @@
       <option name="presentableId" value="Default" />
       <updated>1566825817302</updated>
       <workItem from="1566825821856" duration="418000" />
-      <workItem from="1566826331416" duration="18503000" />
+      <workItem from="1566826331416" duration="22416000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18921000" />
+    <option name="totallyTimeSpent" value="22834000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -441,20 +495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ex/grocerylist/service/GroceryItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
-            <element signature="e#694#695#0" expanded="true" />
-            <element signature="e#869#870#0" expanded="true" />
-            <element signature="e#931#932#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ex/grocerylist/service/GroceryListService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
@@ -472,16 +512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ex/grocerylist/repository/GroceryItemRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -489,12 +519,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ex/grocerylist/configuration/AppConfig.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ex/grocerylist/service/GroceryItemService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="63" column="59" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
+        <state relative-caret-position="308">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
+            <element signature="e#791#792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -509,23 +541,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/ex/grocerylist/model/GroceryItem.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ex/grocerylist/repository/GroceryItemRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+        <state relative-caret-position="155">
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ex/grocerylist/configuration/AppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="63" column="59" selection-start-line="63" selection-start-column="59" selection-end-line="63" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ex/grocerylist/model/GroceryItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ex/grocerylist/controller/GroceryListController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
+        <state relative-caret-position="-14">
           <caret line="65" column="63" selection-start-line="65" selection-start-column="63" selection-end-line="65" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -535,8 +583,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ex/grocerylist/controller/GroceryItemController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+        <state relative-caret-position="477">
+          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

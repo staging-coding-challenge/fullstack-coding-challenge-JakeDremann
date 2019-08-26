@@ -29,7 +29,9 @@ export class GroceryListsComponent implements OnInit {
     this.router.navigate([toUrl])
   }
 
-  delete(list_id: number){
+  delete(list_id: number, event){
     this.groceryListService.delete(list_id);
+    let elem = document.querySelector("#"+list_id);
+    elem.parentNode.removeChild(elem)
   }
 }

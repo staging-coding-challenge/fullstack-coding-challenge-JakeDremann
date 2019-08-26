@@ -45,7 +45,7 @@ export class GroceryListsService {
   }
 
   delete(list_id: number){
-    let urlString = "/api/grocery-list/"+list_id;
+    let urlString = "/api/grocery-lists/"+list_id;
     let x = this.http.delete(urlString, {
       headers: this.headers,
       responseType: "text"

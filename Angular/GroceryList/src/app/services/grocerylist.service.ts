@@ -21,7 +21,7 @@ export class GrocerylistService {
     });
   }
 
-  deleteItem(item_id: string){
+  delete(item_id: number){
     let urlString = "/api/grocery-lists/items/"+item_id;
     let x = this.http.delete(urlString, {
       headers: this.headers,

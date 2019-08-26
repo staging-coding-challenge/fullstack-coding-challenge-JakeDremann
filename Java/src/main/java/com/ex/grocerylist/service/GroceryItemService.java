@@ -1,6 +1,7 @@
 package com.ex.grocerylist.service;
 
 import com.ex.grocerylist.model.GroceryItem;
+import com.ex.grocerylist.model.GroceryList;
 import com.ex.grocerylist.repository.GroceryItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

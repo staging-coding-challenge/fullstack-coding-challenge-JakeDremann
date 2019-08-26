@@ -41,7 +41,7 @@ module.exports = "<router-outlet></router-outlet>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <h1>{{wall['list_name']}}</h1>\n  <h5>{{wall['list_description']}}</h5>\n</div>\n\n<div>\n  <ul class = \"list-group\">\n    <li *ngFor=\"let item of items\" class = \"list-group-item\">{{item['type']}}:  {{item['item']}}</li>\n  </ul>\n</div>\n\n<form></form>\n"
+module.exports = "<div *ngIf=\"wall != null\">\n  <div>\n    <h1>{{wall['list_name']}}</h1>\n    <h5>{{wall['list_description']}}</h5>\n  </div>\n</div>\n\n<div *ngIf=\"items.length != 0\">\n  <ul class = \"list-group\">\n    <li *ngFor=\"let item of items\" class = \"list-group-item\" [id] = \"item['item_id']\">\n      {{item['type']}}:  {{item['item']}}\n      <button [ngStyle]=\"{'float':'right'}\" type = \"button\" class=\"btn btn-danger\" (click)=\"deleteItem(item['item_id'], $event)\">Delete</button>\n    </li>\n  </ul>\n</div>\n\n<form></form>\n"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<div>\n  <h1>{{wall['list_name']}}</h1>\n  <h5>{{wall['list_de
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>My Lists</h1>\n\n<div *ngFor=\"let list of lists\">\n  <div class = \"card\" (click)=\"toDetail(list['list_id'])\">\n    <div class = \"card-title\">{{list['list_name']}}</div>\n    <div class = \"card-body\">{{list['list_description']}}</div>\n<!--    <button type=\"button\" class=\"btn btn-danger\" (click)=delete(list['list_id'])>Delete</button>-->\n  </div>\n</div>\n"
+module.exports = "<h1>My Lists</h1>\n\n<div *ngFor=\"let list of lists\" [id]=\"list['list_id']\">\n  <div class = \"card\" (click)=\"toDetail(list['list_id'])\">\n    <div class = \"card-title\">\n      {{list['list_name']}}\n      <button [ngStyle]=\"{'float':'right'}\"type=\"button\" class=\"btn btn-danger\" (click)=\"delete(list['list_id'], $event)\">Delete</button>\n    </div>\n    <div class = \"card-body\">{{list['list_description']}}</div>\n\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -231,13 +231,18 @@ var GroceryListComponent = /** @class */ (function () {
     GroceryListComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.wallId = this.route.snapshot.params['id'];
-        console.log(this.wallId);
         this.groceryListService.getItemsForList(this.wallId, function (resp) {
             _this.items = JSON.parse(resp);
         });
         this.groceryListsService.getOne(this.wallId, function (resp) {
             _this.wall = JSON.parse(resp);
         });
+    };
+    GroceryListComponent.prototype.deleteItem = function (item_id, event) {
+        this.groceryListService.delete(item_id);
+        var elem = document.querySelector("#" + item_id);
+        elem.parentNode.removeChild(elem);
+        event.stopImmediatePropagation();
     };
     GroceryListComponent.ctorParameters = function () { return [
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
@@ -303,8 +308,11 @@ var GroceryListsComponent = /** @class */ (function () {
         var toUrl = "/list/" + list_id;
         this.router.navigate([toUrl]);
     };
-    GroceryListsComponent.prototype.delete = function (list_id) {
+    GroceryListsComponent.prototype.delete = function (list_id, event) {
         this.groceryListService.delete(list_id);
+        var elem = document.querySelector("#" + list_id);
+        elem.parentNode.removeChild(elem);
+        event.stopImmediatePropagation();
     };
     GroceryListsComponent.ctorParameters = function () { return [
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
@@ -375,7 +383,7 @@ var GroceryListsService = /** @class */ (function () {
         return x;
     };
     GroceryListsService.prototype.delete = function (list_id) {
-        var urlString = "/api/grocery-list/" + list_id;
+        var urlString = "/api/grocery-lists/" + list_id;
         var x = this.http.delete(urlString, {
             headers: this.headers,
             responseType: "text"
@@ -426,7 +434,7 @@ var GrocerylistService = /** @class */ (function () {
             callback(items);
         });
     };
-    GrocerylistService.prototype.deleteItem = function (item_id) {
+    GrocerylistService.prototype.delete = function (item_id) {
         var urlString = "/api/grocery-lists/items/" + item_id;
         var x = this.http.delete(urlString, {
             headers: this.headers,
