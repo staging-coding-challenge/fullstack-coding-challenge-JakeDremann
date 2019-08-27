@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {headersToString} from "selenium-webdriver/http";
 
 @Injectable({
   providedIn: 'root'
@@ -8,18 +7,15 @@ import {headersToString} from "selenium-webdriver/http";
 export class GroceryListsService {
 
   headers = new HttpHeaders().set("Content-Type","application/x-www-form-urlencoded");
-
   constructor(private http: HttpClient) { }
 
   createGroceryList(name: string, description: string){
     let urlString = "/api/grocery-lists";
-    let body = "title="+name+"&description="+description
-    let x = this.http.post(urlString, body, {
+    let body = "name="+name+"&description="+description;
+    this.http.post(urlString, body, {
       headers: this.headers,
       responseType: "text"
-    });
-
-    return x;
+    }).subscribe();
   }
 
   getAll(callback){

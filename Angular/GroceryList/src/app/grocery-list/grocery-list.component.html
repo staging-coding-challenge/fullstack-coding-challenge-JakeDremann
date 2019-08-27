@@ -7,11 +7,15 @@
 
 <div *ngIf="items != null">
   <ul class = "list-group">
-    <li *ngFor="let item of items" class = "list-group-item" [id] = "item['item_id']">
+    <li *ngFor="let item of items" class = "list-group-item">
       {{item['type']}}:  {{item['item']}}
-      <button [ngStyle]="{'float':'right'}" type = "button" class="btn btn-danger" (click)="deleteItem(item['item_id'], $event)">Delete</button>
+      <button [ngStyle]="{'float':'right'}" type = "button" class="btn btn-danger" (click)="deleteItem(item['item_id'])">Delete</button>
     </li>
   </ul>
 </div>
-
-<form></form>
+<ul class = "list-group">
+  <li class = "list-group-item">
+    <input type = "text" id = 'type' placeholder = "Type"/>  :  <input type = "text" id = 'item' placeholder = "Item"/>
+    <button type = "button" class = "btn btn-success" [ngStyle]="{'float':'right'}" (click)="createItem()">Create</button>
+  </li>
+</ul>

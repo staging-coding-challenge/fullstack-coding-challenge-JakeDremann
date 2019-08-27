@@ -1,12 +1,24 @@
 <h1>My Lists</h1>
 
 <div *ngFor="let list of lists" [id]="list['list_id']">
-  <div class = "card" (click)="toDetail(list['list_id'])">
-    <div class = "card-title">
+  <div class = "card">
+    <div class = "card-title" [ngStyle]="{'text-align':'center'}">
       {{list['list_name']}}
-      <button [ngStyle]="{'float':'right'}"type="button" class="btn btn-danger" (click)="delete(list['list_id'], $event)">Delete</button>
+      <button [ngStyle]="{'float':'right'}"type="button" class="btn btn-danger" (click)="delete(list['list_id'])">Delete</button>
     </div>
-    <div class = "card-body">{{list['list_description']}}</div>
-
+    <div class = "card-body" [ngStyle]="{'text-align':'center'}">
+      {{list['list_description']}}
+      <button [ngStyle]="{'float':'right'}"type="button" class="btn btn-warning" (click)="toDetail(list['list_id'])">Details</button>
+    </div>
   </div>
 </div>
+<div class = "card">
+  <div class = "card-title" [ngStyle]="{'text-align':'center'}">
+    <input type = "text" id = "name" placeholder="name" style="text-align: center"/>
+    <button [ngStyle]="{'float':'right'}"type="button" class="btn btn-success" (click)="create()">Create</button>
+  </div>
+  <div class = "card-body" [ngStyle]="{'text-align':'center'}" style = "margin-right: 85px">
+    <input type = "text" id = "desc" placeholder="description" style="text-align: center"/>
+  </div>
+</div>
+

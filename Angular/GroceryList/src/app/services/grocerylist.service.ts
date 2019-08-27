@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from "@angular/common/http";
+import {items} from "../mockData/mockItems";
+import {lists} from "../mockData/mockLists";
 
 
 @Injectable({
@@ -38,7 +40,7 @@ export class GrocerylistService {
   }
 
   addItem(list_id: number, item: string, type: string){
-    let urlString = "/api/grocery-lists/"+list_id+"/items";
+    let urlString = "/api/grocery-list/"+list_id+"/items";
     let body = "list_id="+list_id+"&item="+item+"&type="+type;
     let x = this.http.post(urlString, body, {
       headers: this.headers,

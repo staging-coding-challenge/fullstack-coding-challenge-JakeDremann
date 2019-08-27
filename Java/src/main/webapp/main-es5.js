@@ -41,7 +41,7 @@ module.exports = "<router-outlet></router-outlet>\n"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngIf=\"wall != null\">\n  <div>\n    <h1>{{wall['list_name']}}</h1>\n    <h5>{{wall['list_description']}}</h5>\n  </div>\n</div>\n\n<div *ngIf=\"items != null\">\n  <ul class = \"list-group\">\n    <li *ngFor=\"let item of items\" class = \"list-group-item\" [id] = \"item['item_id']\">\n      {{item['type']}}:  {{item['item']}}\n      <button [ngStyle]=\"{'float':'right'}\" type = \"button\" class=\"btn btn-danger\" (click)=\"deleteItem(item['item_id'], $event)\">Delete</button>\n    </li>\n  </ul>\n</div>\n\n<form></form>\n"
+module.exports = "<div *ngIf=\"wall != null\">\n  <div>\n    <h1>{{wall['list_name']}}</h1>\n    <h5>{{wall['list_description']}}</h5>\n  </div>\n</div>\n\n<div *ngIf=\"items != null\">\n  <ul class = \"list-group\">\n    <li *ngFor=\"let item of items\" class = \"list-group-item\">\n      {{item['type']}}:  {{item['item']}}\n      <button [ngStyle]=\"{'float':'right'}\" type = \"button\" class=\"btn btn-danger\" (click)=\"deleteItem(item['item_id'])\">Delete</button>\n    </li>\n  </ul>\n</div>\n<ul class = \"list-group\">\n  <li class = \"list-group-item\">\n    <input type = \"text\" id = 'type' placeholder = \"Type\"/>  :  <input type = \"text\" id = 'item' placeholder = \"Item\"/>\n    <button type = \"button\" class = \"btn btn-success\" [ngStyle]=\"{'float':'right'}\" (click)=\"createItem()\">Create</button>\n  </li>\n</ul>\n"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<div *ngIf=\"wall != null\">\n  <div>\n    <h1>{{wall['list_na
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h1>My Lists</h1>\n\n<div *ngFor=\"let list of lists\" [id]=\"list['list_id']\">\n  <div class = \"card\" (click)=\"toDetail(list['list_id'])\">\n    <div class = \"card-title\">\n      {{list['list_name']}}\n      <button [ngStyle]=\"{'float':'right'}\"type=\"button\" class=\"btn btn-danger\" (click)=\"delete(list['list_id'], $event)\">Delete</button>\n    </div>\n    <div class = \"card-body\">{{list['list_description']}}</div>\n\n  </div>\n</div>\n"
+module.exports = "<h1>My Lists</h1>\n\n<div *ngFor=\"let list of lists\" [id]=\"list['list_id']\">\n  <div class = \"card\">\n    <div class = \"card-title\" [ngStyle]=\"{'text-align':'center'}\">\n      {{list['list_name']}}\n      <button [ngStyle]=\"{'float':'right'}\"type=\"button\" class=\"btn btn-danger\" (click)=\"delete(list['list_id'])\">Delete</button>\n    </div>\n    <div class = \"card-body\" [ngStyle]=\"{'text-align':'center'}\">\n      {{list['list_description']}}\n      <button [ngStyle]=\"{'float':'right'}\"type=\"button\" class=\"btn btn-warning\" (click)=\"toDetail(list['list_id'])\">Details</button>\n    </div>\n  </div>\n</div>\n<div class = \"card\">\n  <div class = \"card-title\" [ngStyle]=\"{'text-align':'center'}\">\n    <input type = \"text\" id = \"name\" placeholder=\"name\" style=\"text-align: center\"/>\n    <button [ngStyle]=\"{'float':'right'}\"type=\"button\" class=\"btn btn-success\" (click)=\"create()\">Create</button>\n  </div>\n  <div class = \"card-body\" [ngStyle]=\"{'text-align':'center'}\" style = \"margin-right: 85px\">\n    <input type = \"text\" id = \"desc\" placeholder=\"description\" style=\"text-align: center\"/>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -198,7 +198,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2dyb2NlcnktbGlzdC9ncm9jZXJ5LWxpc3QuY29tcG9uZW50LmNzcyJ9 */"
+module.exports = "h1 {\n  margin: 10px;\n}\n\n.card {\n  margin: 10px;\n}\n\n.card-title {\n  margin: 10px;\n}\n\n.card-body {\n  margin: 10px;\n  padding: 0px;\n}\n\nul {\n  margin-left: 10px;\n  margin-right: 10px;\n}\n\nli {\n  margin-left: 10px;\n  margin-right: 10px;\n}\n\nh5 {\n  margin: 10px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ3JvY2VyeS1saXN0L2dyb2NlcnktbGlzdC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsWUFBWTtBQUNkOztBQUVBO0VBQ0UsWUFBWTtBQUNkOztBQUVBO0VBQ0UsWUFBWTtBQUNkOztBQUVBO0VBQ0UsWUFBWTtFQUNaLFlBQVk7QUFDZDs7QUFFQTtFQUNFLGlCQUFpQjtFQUNqQixrQkFBa0I7QUFDcEI7O0FBRUE7RUFDRSxpQkFBaUI7RUFDakIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsWUFBWTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvZ3JvY2VyeS1saXN0L2dyb2NlcnktbGlzdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaDEge1xuICBtYXJnaW46IDEwcHg7XG59XG5cbi5jYXJkIHtcbiAgbWFyZ2luOiAxMHB4O1xufVxuXG4uY2FyZC10aXRsZSB7XG4gIG1hcmdpbjogMTBweDtcbn1cblxuLmNhcmQtYm9keSB7XG4gIG1hcmdpbjogMTBweDtcbiAgcGFkZGluZzogMHB4O1xufVxuXG51bCB7XG4gIG1hcmdpbi1sZWZ0OiAxMHB4O1xuICBtYXJnaW4tcmlnaHQ6IDEwcHg7XG59XG5cbmxpIHtcbiAgbWFyZ2luLWxlZnQ6IDEwcHg7XG4gIG1hcmdpbi1yaWdodDogMTBweDtcbn1cblxuaDUge1xuICBtYXJnaW46IDEwcHg7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -227,22 +227,67 @@ var GroceryListComponent = /** @class */ (function () {
         this.route = route;
         this.groceryListService = groceryListService;
         this.groceryListsService = groceryListsService;
+        this.mockId = -1;
+        this.items = [];
     }
     GroceryListComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.wallId = this.route.snapshot.params['id'];
-        this.groceryListService.getItemsForList(this.wallId, function (resp) {
+        this.listId = this.route.snapshot.params['id'];
+        this.groceryListService.getItemsForList(this.listId, function (resp) {
             _this.items = JSON.parse(resp);
+            _this.setMockID();
         });
-        this.groceryListsService.getOne(this.wallId, function (resp) {
+        this.groceryListsService.getOne(this.listId, function (resp) {
             _this.wall = JSON.parse(resp);
         });
     };
-    GroceryListComponent.prototype.deleteItem = function (item_id, event) {
-        event.stopPropagation();
+    GroceryListComponent.prototype.deleteItem = function (item_id) {
+        var e_1, _a;
+        var newItems = [];
+        try {
+            for (var _b = tslib__WEBPACK_IMPORTED_MODULE_0__["__values"](this.items), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var item = _c.value;
+                if (item.item_id != item_id && item.list_id == this.listId) {
+                    newItems.push(item);
+                }
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        this.items = newItems;
         this.groceryListService.delete(item_id);
-        var elem = document.querySelector("#" + item_id);
-        elem.parentNode.removeChild(elem);
+    };
+    GroceryListComponent.prototype.createItem = function () {
+        var type = document.getElementById("type").value;
+        var item = document.getElementById("item").value;
+        this.mockId = this.mockId + 1;
+        var newItem = { 'item_id': this.mockId, 'list_id': this.listId, 'item': item, 'type': type };
+        this.items.push(newItem);
+        this.groceryListService.addItem(this.listId, item, type);
+    };
+    GroceryListComponent.prototype.setMockID = function () {
+        var e_2, _a;
+        var temp = -1;
+        try {
+            for (var _b = tslib__WEBPACK_IMPORTED_MODULE_0__["__values"](this.items), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var item = _c.value;
+                if (item.list_id > temp) {
+                    this.mockId = item.list_id;
+                }
+            }
+        }
+        catch (e_2_1) { e_2 = { error: e_2_1 }; }
+        finally {
+            try {
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_2) throw e_2.error; }
+        }
     };
     GroceryListComponent.ctorParameters = function () { return [
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
@@ -270,7 +315,7 @@ var GroceryListComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "h1 {\n  margin: 10px;\n}\n\n.card {\n  margin: 10px;\n}\n\n.card-title {\n  margin: 10px;\n}\n\n.card-body {\n  margin: 10px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ3JvY2VyeS1saXN0cy9ncm9jZXJ5LWxpc3RzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxZQUFZO0FBQ2QiLCJmaWxlIjoic3JjL2FwcC9ncm9jZXJ5LWxpc3RzL2dyb2NlcnktbGlzdHMuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbImgxIHtcbiAgbWFyZ2luOiAxMHB4O1xufVxuXG4uY2FyZCB7XG4gIG1hcmdpbjogMTBweDtcbn1cblxuLmNhcmQtdGl0bGUge1xuICBtYXJnaW46IDEwcHg7XG59XG5cbi5jYXJkLWJvZHkge1xuICBtYXJnaW46IDEwcHg7XG59XG4iXX0= */"
+module.exports = "h1 {\n  margin: 10px;\n}\n\n.card {\n  margin: 10px;\n}\n\n.card-title {\n  margin: 10px;\n}\n\n.card-body {\n  margin: 10px;\n  padding: 0px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZ3JvY2VyeS1saXN0cy9ncm9jZXJ5LWxpc3RzLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxZQUFZO0VBQ1osWUFBWTtBQUNkIiwiZmlsZSI6InNyYy9hcHAvZ3JvY2VyeS1saXN0cy9ncm9jZXJ5LWxpc3RzLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJoMSB7XG4gIG1hcmdpbjogMTBweDtcbn1cblxuLmNhcmQge1xuICBtYXJnaW46IDEwcHg7XG59XG5cbi5jYXJkLXRpdGxlIHtcbiAgbWFyZ2luOiAxMHB4O1xufVxuXG4uY2FyZC1ib2R5IHtcbiAgbWFyZ2luOiAxMHB4O1xuICBwYWRkaW5nOiAwcHg7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -288,36 +333,86 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _services_grocery_lists_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../services/grocery-lists.service */ "./src/app/services/grocery-lists.service.ts");
+/* harmony import */ var _services_grocerylist_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/grocerylist.service */ "./src/app/services/grocerylist.service.ts");
+
 
 
 
 
 var GroceryListsComponent = /** @class */ (function () {
-    function GroceryListsComponent(route, router, groceryListService) {
+    function GroceryListsComponent(route, router, groceryListsService, groceryListService) {
         this.route = route;
         this.router = router;
+        this.groceryListsService = groceryListsService;
         this.groceryListService = groceryListService;
+        this.lists = [];
     }
     GroceryListsComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.groceryListService.getAll(function (resp) {
+        this.groceryListsService.getAll(function (resp) {
             _this.lists = JSON.parse(resp);
+            _this.setMockID();
         });
     };
     GroceryListsComponent.prototype.toDetail = function (list_id) {
         var toUrl = "/list/" + list_id;
         this.router.navigate([toUrl]);
     };
-    GroceryListsComponent.prototype.delete = function (list_id, event) {
-        event.stopPropagation();
+    GroceryListsComponent.prototype.delete = function (list_id) {
+        var e_1, _a;
+        var newList = [];
+        try {
+            for (var _b = tslib__WEBPACK_IMPORTED_MODULE_0__["__values"](this.lists), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var list = _c.value;
+                if (list.list_id != list_id) {
+                    newList.push(list);
+                }
+            }
+        }
+        catch (e_1_1) { e_1 = { error: e_1_1 }; }
+        finally {
+            try {
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_1) throw e_1.error; }
+        }
+        this.lists = newList;
+        this.groceryListsService.delete(list_id);
         this.groceryListService.delete(list_id);
-        var elem = document.querySelector("#" + list_id);
-        elem.parentNode.removeChild(elem);
+    };
+    GroceryListsComponent.prototype.create = function () {
+        var name = document.getElementById("name").value;
+        var description = document.getElementById("desc").value;
+        this.mockID = this.mockID + 1;
+        var newList = { 'list_id': this.mockID, 'list_name': name, 'list_description': description };
+        this.lists.push(newList);
+        console.log(this.lists);
+        this.groceryListsService.createGroceryList(name, description);
+    };
+    GroceryListsComponent.prototype.setMockID = function () {
+        var e_2, _a;
+        var temp = -1;
+        try {
+            for (var _b = tslib__WEBPACK_IMPORTED_MODULE_0__["__values"](this.lists), _c = _b.next(); !_c.done; _c = _b.next()) {
+                var list = _c.value;
+                if (list.list_id > temp) {
+                    this.mockID = list.list_id;
+                }
+            }
+        }
+        catch (e_2_1) { e_2 = { error: e_2_1 }; }
+        finally {
+            try {
+                if (_c && !_c.done && (_a = _b.return)) _a.call(_b);
+            }
+            finally { if (e_2) throw e_2.error; }
+        }
     };
     GroceryListsComponent.ctorParameters = function () { return [
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"] },
         { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
-        { type: _services_grocery_lists_service__WEBPACK_IMPORTED_MODULE_3__["GroceryListsService"] }
+        { type: _services_grocery_lists_service__WEBPACK_IMPORTED_MODULE_3__["GroceryListsService"] },
+        { type: _services_grocerylist_service__WEBPACK_IMPORTED_MODULE_4__["GrocerylistService"] }
     ]; };
     GroceryListsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -356,12 +451,11 @@ var GroceryListsService = /** @class */ (function () {
     }
     GroceryListsService.prototype.createGroceryList = function (name, description) {
         var urlString = "/api/grocery-lists";
-        var body = "title=" + name + "&description=" + description;
-        var x = this.http.post(urlString, body, {
+        var body = "name=" + name + "&description=" + description;
+        this.http.post(urlString, body, {
             headers: this.headers,
             responseType: "text"
-        });
-        return x;
+        }).subscribe();
     };
     GroceryListsService.prototype.getAll = function (callback) {
         var urlString = "/api/grocery-lists";
@@ -449,7 +543,7 @@ var GrocerylistService = /** @class */ (function () {
         }).subscribe();
     };
     GrocerylistService.prototype.addItem = function (list_id, item, type) {
-        var urlString = "/api/grocery-lists/" + list_id + "/items";
+        var urlString = "/api/grocery-list/" + list_id + "/items";
         var body = "list_id=" + list_id + "&item=" + item + "&type=" + type;
         var x = this.http.post(urlString, body, {
             headers: this.headers,
